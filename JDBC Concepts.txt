@@ -1,0 +1,145 @@
+1)Write a 5 steps in jdbc?
+1. Load the JDBC driver:
+   Example: Class.forName("com.mysql.cj.jdbc.Driver");
+
+2. Establish the connection:
+   Example: Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname", "username", "password");
+
+3. Create a statement or prepared statement:
+   Example:
+   Statement stmt = conn.createStatement();
+   or
+   PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM table WHERE id = ?");
+
+4. Execute the query:
+   Example:
+   ResultSet rs = stmt.executeQuery("SELECT * FROM table");
+   or
+   pstmt.setInt(1, 101);
+   ResultSet rs = pstmt.executeQuery();
+
+5. Close the resources:
+   Example:
+   rs.close();
+   stmt.close(); or pstmt.close();
+   conn.close();
+
+ --------------------------------------------------------------------------------------
+2)Difference between statement and prepared statement?
+
+1. Definition:
+- Statement is used to execute simple static SQL queries.
+- PreparedStatement is used to execute parameterized SQL queries.
+
+2. SQL Injection:
+- Statement is vulnerable to SQL injection attacks.
+- PreparedStatement is safe and prevents SQL injection using placeholders (?).
+
+3. Performance:
+- Statement compiles the SQL query every time it is executed.
+- PreparedStatement compiles the query once and can be reused, which improves performance.
+
+4. Parameters:
+- In Statement, parameters are added using string concatenation.
+- In PreparedStatement, parameters are set using methods like setInt(), setString() with ? placeholders.
+
+5. Reusability:
+- Statement is not reusable with different parameters.
+- PreparedStatement can be reused with different parameter values.
+
+6. Example:
+
+Using Statement:
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE id=" + userId);
+
+Using PreparedStatement:
+PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM users WHERE id = ?");
+pstmt.setInt(1, userId);
+ResultSet rs = pstmt.executeQuery();
+
+7. When to use:
+- Use Statement for simple, one-time queries without parameters.
+- Use PreparedStatement for queries with parameters, frequent use, or when security and performance matter.
+-----------------------------------------------------------------------------------------
+
+3)Execute and executeQuery
+
+1. executeQuery():
+- Used for executing SELECT statements.
+- Returns a ResultSet containing the data from the database.
+- Example:
+  PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM users");
+  ResultSet rs = pstmt.executeQuery();
+
+2. execute():
+- Used for executing any SQL statement (SELECT, INSERT, UPDATE, DELETE, etc).
+- Returns boolean:
+  - true if the result is a ResultSet (e.g., SELECT)
+  - false if the result is an update count or no result (e.g., INSERT, UPDATE)
+- Example:
+  Statement stmt = conn.createStatement();
+  boolean result = stmt.execute("SELECT * FROM users");
+
+3. Summary:
+- Use executeQuery() for SELECT queries.
+- Use execute() when you don't know what the SQL statement returns.
+-------------------------------------------------------------------------------------------
+4)Result set meta data
+ResultSetMetaData in JDBC:
+
+1. Definition:
+- ResultSetMetaData is used to get information about the columns of a ResultSet, such as column name, type, count, etc.
+
+2. How to get it:
+- ResultSetMetaData rsmd = resultSet.getMetaData();
+
+3. Common Methods:
+- rsmd.getColumnCount() → returns number of columns.
+- rsmd.getColumnName(int column) → returns name of the column.
+- rsmd.getColumnTypeName(int column) → returns data type name of the column.
+- rsmd.getColumnDisplaySize(int column) → returns width of the column.
+
+4. Example:
+  ResultSet rs = stmt.executeQuery("SELECT * FROM users");
+  ResultSetMetaData rsmd = rs.getMetaData();
+  int columnCount = rsmd.getColumnCount();
+  for(int i = 1; i <= columnCount; i++) {
+      System.out.println("Column " + i + ": " + rsmd.getColumnName(i) + " - " + rsmd.getColumnTypeName(i));
+  }
+
+5. Usage:
+- Useful for displaying table structure.
+- Helpful in generic reporting tools and dynamic queries.
+
+-------------------------------------------------------------------------------------------------
+5)Steps to connect / procedure to connect to oracle ( just to know )
+
+1. Load Oracle JDBC Driver:
+   Class.forName("oracle.jdbc.driver.OracleDriver");
+
+2. Create Connection:
+   Connection conn = DriverManager.getConnection(
+       "jdbc:oracle:thin:@hostname:port:SID", "username", "password");
+
+   Example:
+   Connection conn = DriverManager.getConnection(
+       "jdbc:oracle:thin:@localhost:1521:xe", "system", "oracle");
+
+3. Create Statement:
+   Statement stmt = conn.createStatement();
+
+4. Execute Query:
+   ResultSet rs = stmt.executeQuery("SELECT * FROM employees");
+
+5. Process Result:
+   while(rs.next()) {
+       System.out.println(rs.getString("name"));
+   }
+
+6. Close Resources:
+   rs.close();
+   stmt.close();
+   conn.close();
+
+-----------------------------------------------------------------------------------------------

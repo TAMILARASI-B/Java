@@ -1,0 +1,304 @@
+SQL:
+
+1.Which SQL statement is used to extract data from a database?
+A. GET
+B. OPEN
+C. SELECT ✅
+D. EXTRACT
+
+2.Which clause is used to filter the records in SQL?
+A. ORDER BY
+B. GROUP BY
+C. WHERE ✅
+D. HAVING
+
+3.Which function is used to count the number of rows in a table?
+A. SUM()
+B. COUNT() ✅
+C. ROWCOUNT()
+D. TOTAL()
+
+4.What is the default sorting order of the ORDER BY clause?
+A. Descending
+B. Random
+C. Ascending ✅
+D. None
+
+5.Which SQL keyword is used to change data in a table?
+A. UPDATE ✅
+B. MODIFY
+C. ALTER
+D. CHANGE
+
+6.Which statement is used to remove all rows from a table but retain the structure?
+A. DROP
+B. DELETE
+C. REMOVE
+D. TRUNCATE ✅
+
+7.What is a primary key?
+A. A column that stores unique data
+B. A unique identifier for a record ✅
+C. A foreign key
+D. None of the above
+
+8.Which constraint ensures no null values in a column?
+A. UNIQUE
+B. DEFAULT
+C. NOT NULL ✅
+D. CHECK
+
+9.Which SQL clause is used with aggregate functions?
+A. WHERE
+B. GROUP BY ✅
+C. HAVING
+D. ORDER BY
+
+10.Which join returns all rows when there is a match in either table?
+A. INNER JOIN
+B. LEFT JOIN
+C. RIGHT JOIN
+D. FULL OUTER JOIN ✅
+
+11.What does the UNION operator do?
+A. Combines columns
+B. Combines rows from two SELECTs and removes duplicates ✅
+C. Merges tables
+D. None
+
+12.What does the LIKE operator do?
+A. Compares exact strings
+B. Searches for patterns ✅
+C. Compares numbers
+D. None of the above
+
+13.Which keyword is used to sort data?
+A. GROUP BY
+B. SORT
+C. ORDER BY ✅
+D. FILTER
+
+14.Which command is used to delete a table structure?
+A. REMOVE
+B. DELETE
+C. TRUNCATE
+D. DROP ✅
+
+15.Which operator checks for NULL values?
+A. = NULL
+B. IS NULL ✅
+C. == NULL
+D. EQUAL NULL
+
+16.Which statement is correct about FOREIGN KEY?
+A. It is a unique key
+B. It references a primary key in another table ✅
+C. It only exists in one table
+D. It cannot be null
+
+17.How do you select all columns from a table?
+A. SELECT ALL
+B. SELECT * ✅
+C. SELECT #
+D. SELECT COLUMNS
+
+18.Which keyword is used to eliminate duplicate rows?
+A. UNIQUE
+B. DISTINCT ✅
+C. REMOVE
+D. DIFFERENT
+
+19.Which data type is used to store dates in SQL?
+A. VARCHAR
+B. TIME
+C. DATETIME ✅
+D. DATESTR
+
+20.Which SQL function returns the current system date?
+A. SYSDATE ✅
+B. GETDATE
+C. TODAY
+D. CURRENT_DATE
+
+21.What is the result of NULL + 5?
+A. 5
+B. 0
+C. NULL ✅
+D. Error
+
+22.Which clause filters data after aggregation?
+A. WHERE
+B. GROUP BY
+C. ORDER BY
+D. HAVING ✅
+
+23.Which SQL command is used to create a new table?
+A. MAKE TABLE
+B. CREATE TABLE ✅
+C. NEW TABLE
+D. BUILD TABLE
+
+24.Which command is used to modify the structure of a table?
+A. UPDATE
+B. CHANGE
+C. ALTER TABLE ✅
+D. MODIFY TABLE
+
+25.Which SQL function is used to find the maximum value?
+A. MAX() ✅
+B. BIGGEST()
+C. LARGEST()
+D. TOP()
+
+
+PL/SQL:
+
+1. What is a trigger in SQL?
+   A. A stored function
+   B. A procedure executed manually
+   C. A block executed automatically on a specific event ✅
+   D. A view
+
+2. Which of the following events can activate a trigger?
+   A. INSERT
+   B. UPDATE
+   C. DELETE
+   D. All of the above ✅
+
+3. Which keyword is used to create a trigger?
+   A. CREATE BLOCK
+   B. CREATE PROCEDURE
+   C. CREATE TRIGGER ✅
+   D. CREATE FUNCTION
+
+4. A BEFORE trigger fires:
+   A. After the triggering event
+   B. Only during transactions
+   C. Just before the triggering DML operation ✅
+   D. When rollback occurs
+
+5. Which of these is NOT a valid trigger type in Oracle PL/SQL?
+   A. BEFORE INSERT
+   B. AFTER UPDATE
+   C. INSTEAD OF DELETE
+   D. ON SELECT ✅
+
+6. Which pseudo-records are available in row-level triggers?
+   A. \:THIS and \:THAT
+   B. \:BEFORE and \:AFTER
+   C. \:NEW and \:OLD ✅
+   D. None
+
+7. What is a cursor in PL/SQL?
+   A. A control structure
+   B. A pointer to a context area containing result rows ✅
+   C. A procedure
+   D. A function
+
+8. Which type of cursor is created by default when an SQL statement is executed?
+   A. Explicit
+   B. Implicit ✅
+   C. Static
+   D. Manual
+
+9. Which statement is used to define an explicit cursor?
+   A. CREATE CURSOR
+   B. OPEN CURSOR
+   C. DECLARE CURSOR ✅
+   D. FETCH CURSOR
+
+10. Which of the following is the correct sequence of cursor operations?
+    A. OPEN, FETCH, CLOSE ✅
+    B. DECLARE, OPEN, CLOSE
+    C. FETCH, OPEN, CLOSE
+    D. OPEN, CLOSE, FETCH
+
+11. What happens if you FETCH from a cursor after the last row?
+    A. Error
+    B. It repeats the last row
+    C. It sets %NOTFOUND to TRUE ✅
+    D. Restarts from first row
+
+12. Which attribute checks if the cursor contains any rows?
+    A. %FOUND ✅
+    B. %COUNT
+    C. %ROWCOUNT
+    D. %EXISTS
+
+13. Can a cursor be used in a FOR loop without explicitly opening or closing it?
+    A. No
+    B. Yes, using CURSOR FOR loop ✅
+    C. Only for static queries
+    D. Only in triggers
+
+14. What is a stored procedure in PL/SQL?
+    A. A compiled SQL statement
+    B. A named PL/SQL block that performs a task ✅
+    C. A dynamic query
+    D. A trigger
+
+15. Which keyword is used to define a procedure?
+    A. FUNCTION
+    B. TRIGGER
+    C. PROCEDURE ✅
+    D. METHOD
+
+16. Which statement is used to execute a procedure in SQL\*Plus?
+    A. EXEC procedure\_name ✅
+    B. CALL procedure\_name
+    C. RUN procedure\_name
+    D. START procedure\_name
+
+17. What is the maximum number of OUT parameters a procedure can have?
+    A. 1
+    B. 2
+    C. No limit ✅
+    D. 10
+
+18. Procedures can have:
+    A. IN parameters
+    B. OUT parameters
+    C. IN OUT parameters
+    D. All of the above ✅
+
+19. Which clause is used to remove a procedure?
+    A. DELETE PROCEDURE
+    B. REMOVE PROCEDURE
+    C. DROP PROCEDURE ✅
+    D. TRUNCATE PROCEDURE
+
+20. What is a view in SQL?
+    A. A virtual table based on a SELECT query ✅
+    B. A physical copy of a table
+    C. A stored procedure
+    D. A type of trigger
+
+21. Which command is used to create a view?
+    A. NEW VIEW
+    B. MAKE VIEW
+    C. CREATE VIEW ✅
+    D. INIT VIEW
+
+22. Which clause is used to update a view definition?
+    A. MODIFY VIEW
+    B. ALTER VIEW ✅
+    C. UPDATE VIEW
+    D. REPLACE VIEW
+
+23. Can a view be created with a JOIN clause?
+    A. No
+    B. Yes ✅
+    C. Only INNER JOIN
+    D. Only if indexed
+
+24. Which of the following is true about views?
+    A. Views store data physically
+    B. Views can be indexed
+    C. Views are always updatable
+    D. Views store no data themselves ✅
+
+25. INSTEAD OF triggers are typically used on:
+    A. Tables
+    B. Materialized views
+    C. Complex views ✅
+    D. Procedures
