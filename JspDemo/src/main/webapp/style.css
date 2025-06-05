@@ -1,0 +1,290 @@
+/* General dark theme setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0c0c1b;
+    color: #ffffff;
+    background-image: radial-gradient(circle, #1e1e2f, #0c0c1b);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Card container */
+div {
+    background-color: rgba(25, 0, 50, 0.8);
+    width: 90%;
+    max-width: 500px;
+    margin: 80px auto;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+    animation: fadeIn 1.2s ease-in-out;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+/* Headings */
+h1, h3 {
+    color: #e0d4f7;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #7f00ff;
+}
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    padding: 12px;
+    margin: 10px 0;
+    width: 90%;
+    border: 2px solid #a855f7;
+    border-radius: 10px;
+    font-size: 1em;
+    background-color: #1b1b2e;
+    color: #f0e6ff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #c084fc;
+    box-shadow: 0 0 8px #c084fc;
+    outline: none;
+}
+
+/* Buttons */
+input[type="submit"] {
+    background: linear-gradient(145deg, #7e22ce, #9333ea);
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #9333ea;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #c084fc;
+}
+
+/* Success and Error Messages */
+.success-message, .error-message {
+    padding: 10px;
+    margin: 20px auto;
+    width: 90%;
+    border-radius: 10px;
+    font-weight: bold;
+    animation: slideFade 0.8s ease-out;
+}
+
+.success-message {
+    background-color: rgba(34, 197, 94, 0.9);
+    color: white;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+.error-message {
+    background-color: rgba(239, 68, 68, 0.9);
+    color: white;
+    box-shadow: 0 0 10px #ef4444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    div {
+        width: 95%;
+        padding: 20px;
+    }
+    input[type="text"], input[type="password"] {
+        font-size: 0.9em;
+    }
+    input[type="submit"] {
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
+/* Table styling for Display */
+.styled-table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 400px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(75, 0, 130, 0.6);
+  background-color: #1e1e2f;
+  color: #ddd;
+}
+
+.styled-table thead tr {
+  background: linear-gradient(90deg, #6a0dad, #330066);
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 20px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #3a3a5a;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #2a2a44;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #6a0dad;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+.error-msg {
+  background-color: #fff;
+    color: red;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 20px auto;
+    box-shadow: 0 0 10px red;
+}
+.message-card {
+    background-color: #1a0033;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 100px auto;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #a855f7;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.message-card h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.message-card p {
+    font-size: 18px;
+    color: #a3a3ff;
+}
+
+.home-link {
+    display: block;
+    margin-top: 20px;
+    color: #5f5fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-link:hover {
+    color: #d0b3ff;
+    text-decoration: underline;
+}
+body {
+    background-color: #0e0b1c;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-title {
+    color: #22c55e;
+    margin-top: 40px;
+}
+
+.employee-table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px #9333ea;
+}
+
+.employee-table th, .employee-table td {
+    border: 1px solid #5b21b6;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.employee-table th {
+    background-color: #6d28d9;
+    color: white;
+}
+
+.employee-table tr:nth-child(even) {
+    background-color: #1e1b2f;
+}
+
+.employee-table tr:nth-child(odd) {
+    background-color: #2b2545;
+}
+
+.employee-table tr:hover {
+    background-color: #3d2c61;
+    transition: background-color 0.3s ease;
+}
+
+.no-records {
+    color: #f43f5e;
+    font-weight: bold;
+}
+
+.error-text {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.back-home {
+    margin-top: 30px;
+}
+
+.back-home a {
+    color: #a78bfa;
+    text-decoration: none;
+    background-color: #4c1d95;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px #9333ea;
+}
+
+.back-home a:hover {
+    background-color: #6d28d9;
+    color: white;
+}
+
