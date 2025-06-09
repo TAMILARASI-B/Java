@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="empbean" class="com.Employee">
+		<property name="uid" value="100"></property>
+		<property name="name" value="Thanesh"></property>
+		<property name="city" value="Banglore"></property>
+		<property name="ph" value="9988766"></property>
+		<property name="hobbies">
+			<list>
+				<value>SINGING</value>
+				<value>DANCING</value>
+				<value>PLAYING</value>
+				<value>EATING</value>
+				<value>SLEEPING</value>
+			</list>
+		</property>
+		<property name="emails">
+			<list>
+				<value>INBOX</value>
+				<value>PROMOTION</value>
+				<value>COMPOSE TO</value>
+				<value>SPAM</value>
+				<value>TRASH</value>
+			</list>
+		</property>
+		<property name="pan">
+			<set>
+				<value>pan1</value>
+				<value>pan1</value>
+				<value>pan2</value>
+				<value>pan2</value>
+				<value>pan3</value>
+			</set>
+		</property>
+	</bean>
+</beans>
