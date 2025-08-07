@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Courier Service</title>
+    <link rel="stylesheet" href="courier.css">
+</head>
+<body>
+    <header>
+       <h1>Online Courier Service</h1>
+        <h5><marquee>"Our Customer Support team is reachable only from our website . Login with your phone number and raise your support request with us"
+        </marquee></h5>
+    </header>
+    <main>
+    <center>
+    <img src="online courier.jpg "alt=" deliver pic" >
+    </center>
+        <div class="container">
+            <section id="create-order">
+                <h2>Create Order</h2>
+                <div class="form-container">
+                    <form id="order-form">
+                        <label for="customer_name">Customer Name:</label>
+                        <input type="text" id="customer_name" name="customer_name" required><br><br>
+                        <label for="delivery_address">Delivery Address:</label>
+                        <input type="text" id="delivery_address" name="delivery_address" required><br><br>
+                        <label for="product_name">Product Name:</label>
+                        <input type="text" id="product_name" name="product_name" required><br><br>
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" required><br><br>
+                        <button type="submit">Create Order</button>
+                       <h6> <div class="box">RAISE A QUERY :call us at +91 98763 23451 </div></h6>
+                    </form>
+                </div>
+            </section>
+            <section id="order-status" style="display: none;">
+                <h2>Order Status</h2>
+                <div id="status-message"></div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
