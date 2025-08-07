@@ -1,0 +1,45 @@
+<h1> Hi Data  Binding Demo </h1>
+<p>
+    {{company}} 
+    {{company}}  
+</p>
+<input type="submit" (click)="abc()" >
+<br>
+
+NAME :<input type="text" #un>
+    <input type="submit" value="SEND" (click)="xyz(un.value)">
+    <hr>
+<div>
+    <h1>
+        Principle :<input type="text" #p><br>
+        TIME :<input type="text" #t><br>
+
+       <select    (change)="onChange($event)">>
+            <option>Loan</option>
+            <option>CAR</option>
+            <option>PERSONAL</option>
+            <option>EDU</option>
+            <option>HOME</option>
+       </select> 
+       
+       ROI :<input type="text" value={{roi}} #r disabled><br>
+        EMI  : <input type="text"  value={{emi}} disabled><bR>
+        Total : <input type="text"  value={{TOTALAMOUNT}} disabled><bR>
+
+        <input type="submit" 
+        (click)="cal(p.value,t.value,r.value)">
+    </h1>
+
+    <img  src="../../assets/comp1.jpg" >
+
+
+    <hr>
+  
+</div>
+
+
+
+
+
+
+

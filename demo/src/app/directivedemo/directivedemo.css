@@ -1,0 +1,14 @@
+div{
+    width: 50%;
+}
+
+.bgclr{
+    background-color: pink;
+}
+
+.bdr {
+    border: 5px solid red;
+}
+.mrgn{
+    margin: 10px;
+}
