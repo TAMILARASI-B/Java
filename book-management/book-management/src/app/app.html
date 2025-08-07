@@ -1,0 +1,26 @@
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-4 py-2 shadow">
+  <a class="navbar-brand fw-bold" routerLink="/">Book Management</a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/books">Books</a>
+      </li>
+       <li class="nav-item" *ngIf="isLoggedIn()">
+        <a class="nav-link" href="#" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Route Content Here -->
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>

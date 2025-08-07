@@ -1,0 +1,36 @@
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="text-center mb-4">Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">
+      Login
+    </button>
+
+    <p class="text-center mt-3">
+      Don't have an account?
+      <a routerLink="/register">Register here</a>
+    </p>
+  </form>
+</div>

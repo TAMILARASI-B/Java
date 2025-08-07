@@ -1,0 +1,29 @@
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="text-center mb-4">Register</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" type="email" formControlName="email" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input id="password" type="password" formControlName="password" class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="role" class="form-label">Role</label>
+      <select id="role" class="form-select" formControlName="role">
+        <option value="USER">User</option>
+      
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success w-100">Register</button>
+
+    <p class="text-center mt-3">
+      Already registered? <a routerLink="/login">Login here</a>
+    </p>
+  </form>
+</div>
