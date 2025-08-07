@@ -1,0 +1,12 @@
+<h2>Main App Component</h2>
+
+<div *ngIf="showComponent">
+  <app-lifecycle-demo [message]="myMessage">
+    <p>This is projected content inside ng-content</p>
+  </app-lifecycle-demo>
+</div>
+
+<button (click)="changeMessage()">Change Input</button>
+<button (click)="toggleComponent()">
+  {{ showComponent ? 'Destroy' : 'Recreate' }} Component
+</button>
