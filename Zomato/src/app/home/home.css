@@ -1,0 +1,52 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 140px); /* Adjust for header and footer */
+  background-image: url('https://source.unsplash.com/1600x900/?food,restaurant');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons .btn {
+  padding: 10px 25px;
+  margin: 0 10px;
+  background-color: #e23744;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.hero-buttons .btn:hover {
+  background-color: #c2202f;
+}
+
+.hero-buttons .btn-secondary {
+  background-color: #ffffff;
+  color: #e23744;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: #f3f3f3;
+}
